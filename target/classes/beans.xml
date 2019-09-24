@@ -29,7 +29,7 @@
 <!--    </bean>-->
 
 
-
+    <bean name="beanLifeCycleDemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
     <bean name="MovieA" class="com.stackroute.domain.Movie" autowire="byName">
     </bean>
     <bean name="MovieB" class="com.stackroute.domain.Movie">
