@@ -19,22 +19,24 @@ public class Main{
     public static void main(String[] args) {
         System.out.println("Using Application Context: ");
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie= context.getBean("movie",Movie.class);
+        Movie movie= context.getBean("MovieA",Movie.class);
         movie.displayActorDetails();
-        System.out.println("Using XmlBeanFactory: ");
-        BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
-        Movie movie1 = factory.getBean("movie",Movie.class);
-        movie1.displayActorDetails();
-        System.out.println("Using BeanDefintionRegistry: ");
-        BeanDefinitionRegistry beanDefinitionRegistry = (BeanDefinitionRegistry) factory;
-        if(beanDefinitionRegistry.containsBeanDefinition("movie"))
-        {
-            BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
-            beanDefinitionReader.loadBeanDefinitions("beans.xml");
-            //to modify
-            Movie movie2 = factory.getBean("movie",Movie.class);
-            movie2.displayActorDetails();
-        }
+        Movie movie1 = context.getBean("MovieB",Movie.class);
+        System.out.println(movie==movie1);
+//        System.out.println("Using XmlBeanFactory: ");
+//        BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
+//        Movie movie1 = factory.getBean("movie",Movie.class);
+//        movie1.displayActorDetails();
+//        System.out.println("Using BeanDefintionRegistry: ");
+//        BeanDefinitionRegistry beanDefinitionRegistry = (BeanDefinitionRegistry) factory;
+//        if(beanDefinitionRegistry.containsBeanDefinition("movie"))
+//        {
+//            BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
+//            beanDefinitionReader.loadBeanDefinitions("beans.xml");
+//            //to modify
+//            Movie movie2 = factory.getBean("movie",Movie.class);
+//            movie2.displayActorDetails();
+//        }
 
     }
 
