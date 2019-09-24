@@ -21,8 +21,8 @@ public class Main{
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie= context.getBean("MovieA",Movie.class);
         movie.displayActorDetails();
-        Movie movie1 = context.getBean("MovieB",Movie.class);
-        System.out.println(movie==movie1);
+        Movie movie1= context.getBean("MovieB",Movie.class);
+        movie1.displayActorDetails();
 //        System.out.println("Using XmlBeanFactory: ");
 //        BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
 //        Movie movie1 = factory.getBean("movie",Movie.class);
