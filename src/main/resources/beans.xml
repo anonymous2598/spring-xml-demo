@@ -16,24 +16,13 @@
         <constructor-arg name="age" value="21"/>
     </bean>
 
-<!--    <bean id="actor2" class="com.stackroute.domain.Actor" scope="singleton">-->
-<!--        <constructor-arg type="java.lang.String" value="sandeep2"/>-->
-<!--        <constructor-arg type="java.lang.String" value="male"/>-->
-<!--        <constructor-arg type="int" value="21" />-->
+
+<bean id="beanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean" />
+<!--    <bean name="beanLifeCycleDemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>-->
+<!--    <bean name="MovieA" class="com.stackroute.domain.Movie" autowire="byName">-->
 <!--    </bean>-->
-
-<!--    <bean id="actor3" class="com.stackroute.domain.Actor" scope="singleton">-->
-<!--        <constructor-arg index="0" value="sandeep3"/>-->
-<!--        <constructor-arg index="1" value="male"/>-->
-<!--        <constructor-arg index="2" value="21"/>-->
+<!--    <bean name="MovieB" class="com.stackroute.domain.Movie">-->
+<!--        <constructor-arg ref="actor"/>-->
 <!--    </bean>-->
-
-
-    <bean name="beanLifeCycleDemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
-    <bean name="MovieA" class="com.stackroute.domain.Movie" autowire="byName">
-    </bean>
-    <bean name="MovieB" class="com.stackroute.domain.Movie">
-        <constructor-arg ref="actor"/>
-    </bean>
 
 </beans>

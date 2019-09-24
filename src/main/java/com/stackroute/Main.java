@@ -18,12 +18,12 @@ import org.springframework.core.io.ClassPathResource;
 
 public class Main{
     public static void main(String[] args) {
-        System.out.println("Using Application Context: ");
+//        System.out.println("Using Application Context: ");
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie= context.getBean("MovieA",Movie.class);
-        movie.displayActorDetails();
-        Movie movie1= context.getBean("MovieB",Movie.class);
-        movie1.displayActorDetails();
+//        Movie movie= context.getBean("MovieA",Movie.class);
+////        movie.displayActorDetails();
+//        Movie movie1= context.getBean("MovieB",Movie.class);
+//        movie1.displayActorDetails();
         context.registerShutdownHook();
 //        System.out.println("Using XmlBeanFactory: ");
 //        BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
