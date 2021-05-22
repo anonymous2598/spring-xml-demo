@@ -7,12 +7,12 @@ public class BeanLifecycleDemoBean implements DisposableBean, InitializingBean {
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("Destroy called");
+        System.out.println("overridden Destroy from DisposableBean Interface called");
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("afterPropertiesSet called");
+        System.out.println("overridden afterPropertiesSet from InitializingBean called");
     }
 
     public void customInit()
