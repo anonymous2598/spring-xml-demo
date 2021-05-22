@@ -10,8 +10,8 @@ public class Movie {
         this.actor1 = actor1;
     }
 
-    public Movie(Actor actor) {
-        this.actor1 = actor;
+    public Movie(Actor actor2) {
+        this.actor1 = actor2;
     }
     public void displayActorDetails()
     {

@@ -27,8 +27,8 @@
 
     <bean name="MovieA" class="com.stackroute.domain.Movie" autowire="byName">
     </bean>
-    <bean name="MovieB" class="com.stackroute.domain.Movie" ><!--autowire="byType"-->
-        <constructor-arg ref="actor2"/>
+    <bean name="MovieB" class="com.stackroute.domain.Movie" autowire="constructor" ><!--autowire="byType"-->
+<!--        <constructor-arg ref="actor2"/>-->
     </bean>
 
 </beans>

@@ -17,17 +17,17 @@
         <constructor-arg type="int" value="21" />
     </bean>
 
-<!--    <bean id="actor3" class="com.stackroute.domain.Actor" scope="singleton">-->
-<!--        <constructor-arg index="0" value="sandeep3"/>-->
-<!--        <constructor-arg index="1" value="male"/>-->
-<!--        <constructor-arg index="2" value="21"/>-->
-<!--    </bean>-->
+    <bean id="actor3" class="com.stackroute.domain.Actor" scope="singleton">
+        <constructor-arg index="0" value="sandeep3"/>
+        <constructor-arg index="1" value="male"/>
+        <constructor-arg index="2" value="21"/>
+    </bean>
 
 
 
     <bean name="MovieA" class="com.stackroute.domain.Movie" autowire="byName">
     </bean>
-    <bean name="MovieB" class="com.stackroute.domain.Movie" autowire="byType">
+    <bean name="MovieB" class="com.stackroute.domain.Movie" autowire="constructor" ><!--autowire="byType"-->
 <!--        <constructor-arg ref="actor2"/>-->
     </bean>
 
