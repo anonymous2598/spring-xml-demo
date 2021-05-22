@@ -17,12 +17,12 @@
     </bean>
 
 
-<bean id="beanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean" />
-<!--    <bean name="beanLifeCycleDemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>-->
-<!--    <bean name="MovieA" class="com.stackroute.domain.Movie" autowire="byName">-->
-<!--    </bean>-->
-<!--    <bean name="MovieB" class="com.stackroute.domain.Movie">-->
-<!--        <constructor-arg ref="actor"/>-->
-<!--    </bean>-->
+    <bean id="beanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean" />
+    <bean name="beanLifeCycleDemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
+    <!--    <bean name="MovieA" class="com.stackroute.domain.Movie" autowire="byName">-->
+    <!--    </bean>-->
+    <!--    <bean name="MovieB" class="com.stackroute.domain.Movie" autowire="constructor" >&lt;!&ndash;autowire="byType"&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <constructor-arg ref="actor2"/>&ndash;&gt;-->
+    <!--    </bean>-->
 
 </beans>
