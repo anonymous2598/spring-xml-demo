@@ -4,12 +4,6 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="actor" class="com.stackroute.domain.Actor" scope="singleton">
-        <property name="name" value="sandeep"></property>
-        <property name="gender" value="male"></property>
-        <property name="age" value="21"></property>
-    </bean>
-
     <bean id="actor1" class="com.stackroute.domain.Actor" scope="singleton">
         <constructor-arg name="name" value="sandeep"/>
         <constructor-arg name="gender" value="male"/>
